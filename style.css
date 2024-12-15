@@ -1,0 +1,207 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color:whitesmoke;
+  padding: 4rem 2rem;
+  font-size: 18px;
+  font-family: DM Sans;
+}
+.create{ 
+  display: grid;
+  place-content: center;
+  padding: 2rem;
+  gap: 1.5rem;
+  background-color: hsl(31, 66%, 93%);
+}
+.content{
+  display: grid;
+  place-content: center;
+  padding: 2rem;
+  gap: 1.5rem;
+  background-color: hsl(39, 100%, 71%);
+}
+.media{
+  display: grid;
+  place-content: center;
+  padding: 2rem;
+  gap: 1.5rem;
+  background-color: hsl(256, 67%, 59%);
+}
+.manage{
+  display: grid;
+  place-content: center;
+  padding: 2rem;
+  gap: 1.5rem;
+  background-color:  hsl(0, 0%, 100%);
+  position: relative;
+  overflow: hidden;
+}
+.maintain{
+  display: grid;
+  place-content: center;
+  padding: 2rem;
+  background-color:hsl(39, 100%, 71%);
+  position: relative;
+  overflow: hidden;
+}
+.schedule{
+  display: grid;
+  place-content: center;
+  padding: 2rem;
+  gap: 1.5rem;
+  background-color: hsl(254, 88%, 90%);
+  position: relative;
+  overflow: hidden;
+}
+.audiance{
+  display: grid;
+  place-content: center;
+  padding: 2rem;
+  gap: 1.5rem;
+  background-color:hsl(0, 0%, 100%);
+}
+.followers{
+  display: grid;
+  place-content: center;
+  padding: 2rem;
+  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+  background-color:hsl(256, 67%, 59%);
+}
+.container{
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
+  max-width: 80rem;
+  margin: 0 auto;
+  grid-template-areas: "c1 c2 c3"
+                       "c1 c2 c3"
+                       "c1 c4 c4";
+  gap:1.5rem;                    
+}
+.container > *, .inside {
+  display: grid;
+  gap: 1.5rem;
+  
+}
+.card1{
+  grid-area:c1;
+}
+.card2{
+  grid-area:c2;
+}
+.card3{
+  grid-area:c3;
+}
+.card4{
+  grid-area:c4;
+  grid-template-columns: 0.94fr 2fr;
+}
+.inside{
+  grid-template-columns: 1fr 1fr;
+}
+.card > div{
+  border-radius: 0.4rem;
+}
+.inside > div{
+  border-radius: 0.4rem;
+  padding: 1rem ;
+}
+.create span {
+  color:hsl(256, 67%, 59%);
+}
+.media span {
+  color:hsl(39, 100%, 71%);
+}
+.media p {
+  color:hsl(0, 0%, 100%);
+  margin: auto;
+}
+.media img {
+  width: 50%;
+  margin: auto;
+}
+.manage img{
+  position: relative;
+  left: 2rem;
+}
+.maintain img{
+  position: relative;
+  top: 1.5rem;
+}
+.schedule img{
+  position: relative;
+  margin-left: auto;
+
+}
+.followers h2{
+  color:hsl(0, 0%, 100%);
+  font-weight: 400;
+  align-self: center;
+}
+h2{
+  font-weight: 550;
+  line-height: 1;
+}
+h1{
+  font-weight: 550;
+  line-height: 1;
+}
+.media h1{
+  font-weight: 400;
+  line-height: 1;
+  color: hsl(0, 0%, 100%);
+}
+img{
+  width: 100%;
+}
+@media screen and (max-width:870px){
+  .container{
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: " c2 c3"
+                         " c2 c3"
+                         " c4 c4"
+                         " c1 c1";  
+    gap: 1rem;               
+  }
+  .card1{
+    grid-template-columns: 1fr 1fr;
+  }
+  .container > *, .inside {
+    gap: 1rem;
+  }
+  
+}
+@media screen and (max-width:630px){
+  .container{
+    grid-template-rows:auto auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: "c2"
+                         "c3"
+                         "c4"
+                         "c1";  
+    gap: 1rem;               
+  }
+  .inside{
+    grid-template-columns: 1fr;
+  }
+  .card4{
+    grid-template-columns: 1fr;
+  }
+  .card4 .audiance{
+    order: 1;
+  }
+  .card1{
+    grid-template-columns: 1fr;
+  }
+  .followers{
+    grid-template-columns: 1fr ;
+  }
+}
+
+
+ 
